@@ -28,7 +28,7 @@ public class AnagramBasicWay_Sort_And_Compare {
 		System.out.println(s3);
 		Arrays.sort(s4);
 		System.out.println(s4);
-		// compare two strings
+		// compare two strings which are in char arrays
 		if (Arrays.equals(s3, s4)) {
 			System.out.println("Both the strings are Anagrams");
 		} else
