@@ -37,7 +37,7 @@ public class CountWordsInString {
 		System.out.println("Printing using EntrySet it also gives the count");
 		Set<Entry<String, Integer>> set = map.entrySet();
 		for (Entry<String, Integer> s : set) {
-			System.out.println(s);
+			System.out.println(s/* s.getKey() + " " + s.getValue() */);
 		}
 
 		System.out.println("Printing using KeySet");
