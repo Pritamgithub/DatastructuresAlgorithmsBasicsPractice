@@ -1,8 +1,6 @@
 package Strings;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class CountCharactersInString {
@@ -11,15 +9,23 @@ public class CountCharactersInString {
 
 		System.out.println(
 				"Please enter the String for which you are looking to count the Characters");
-		// input
-		String br = "Pritam";
-		System.out.println("Characters in the String " + br.length());
+		// input Can be taken with the help of BufferedReader or Scanner here in
+		// case Instead of mentioning the String value
+		String br = "InputString";
+		System.out.println("Number of Characters in the String " + br.length());
 
-		br.toCharArray();
-		List<String> list = Arrays.asList(br);
-		Map<String, Integer> hashmap = new HashMap();
-		hashmap.put(br, 1);
-		System.out.println("hashmap" + hashmap);
+		char[] c = br.toCharArray();
+
+		Map<Character, Integer> hashmap = new HashMap();
+		for (Character ch : c) {
+			if (hashmap.containsKey(ch)) {
+				hashmap.put(ch, hashmap.get(ch) + 1);
+			} else {
+				hashmap.put(ch, 1);
+			}
+		}
+
+		System.out.println(hashmap);
 	}
 
 }
