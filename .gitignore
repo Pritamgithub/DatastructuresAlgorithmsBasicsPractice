@@ -3,3 +3,10 @@ bin/Strings/CountCharactersInString.class
 *.class
 *.class
 *.class
+.classpath
+.classpath
+.classpath
+.project
+*.class
+.settings/org.eclipse.wst.common.project.facet.core.xml
+bin/Strings/CountCharactersInString.class
