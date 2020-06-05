@@ -10,15 +10,18 @@ public class oneAway {
 
 	public static void main(String[] args) {
 
+		oneAway one = new oneAway();
+		System.out.println(one.oneAwayFunction("av", "abc"));
+		System.out.println(one.oneEditAway("av", "abc"));
 	}
 
 	private boolean oneAwayFunction(String first, String second) {
 		if (first.length() == second.length()) {
 			// one replace way
-			return oneReplaceAway(first, second);
+			return oneEditAway(first, second);
 		} else if (first.length() + 1 == second.length()) {
 			// one add away
-			return oneAddAway(first, second);
+			return oneEditAway(first, second);
 		} else if (first.length() - 1 == second.length()) {
 			// one remove away
 			return oneRemoveAway(first, second);
@@ -26,18 +29,41 @@ public class oneAway {
 		return false;
 
 	}
+	// this handles replace and insert in the same method
+	private boolean oneEditAway(String s1, String s2) {
+
+		if (s1 == null || s2 == null || s1.length() - s2.length() == 0) {
+			return false;
+		}
+		String str1 = s1.length() < s2.length() ? s1 : s2;
+		String str2 = s2.length() < s2.length() ? s2 : s1;
+		assert (str1.length() <= str2.length());
+
+		int index1 = 0;
+		int index2 = 0;
+		char c1[] = str1.toCharArray();
+		char c2[] = str2.toCharArray();
+		boolean foundDiff = false;
+
+		while (index1 < s1.length() && index2 < s2.length()) {
+			if (c1[index1] != c2[index2]) {
+				if (foundDiff) {
+					return false;
+				}
+				foundDiff = true;
+				if (c1.length == c2.length) {
+					index1++;
+				}
+			} else {
+				index1++;
+
+			}
+			index2++;
+		}
+		return true;
+	}
 
 	private boolean oneRemoveAway(String first, String second) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	private boolean oneAddAway(String first, String second) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	private boolean oneReplaceAway(String first, String second) {
 		// TODO Auto-generated method stub
 		return false;
 	}
