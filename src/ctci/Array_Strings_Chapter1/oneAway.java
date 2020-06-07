@@ -1,7 +1,7 @@
 package ctci.Array_Strings_Chapter1;
 
 //Three types of edits that can be performed on strings: insert a character, remove a character, replace a character.
-//given 2 strings write a function to check if they are one eidt or zero edits away
+//given 2 strings write a function to check if they are one edits or zero edits away
 // pale, ple-> true
 //pales, pale->true
 //pale, bale->true
@@ -36,13 +36,14 @@ public class oneAway {
 			return false;
 		}
 		String str1 = s1.length() < s2.length() ? s1 : s2;
-		String str2 = s2.length() < s2.length() ? s2 : s1;
+		String str2 = s2.length() < s1.length() ? s2 : s1;
+		// TODO
 		assert (str1.length() <= str2.length());
 
-		int index1 = 0;
-		int index2 = 0;
-		char c1[] = str1.toCharArray();
-		char c2[] = str2.toCharArray();
+		int index1 = 0;// counter 1
+		int index2 = 0;// counter 2
+		char c1[] = str1.toCharArray(); // convert string 1 in char array
+		char c2[] = str2.toCharArray();// convert string 2 in char array
 		boolean foundDiff = false;
 
 		while (index1 < s1.length() && index2 < s2.length()) {
