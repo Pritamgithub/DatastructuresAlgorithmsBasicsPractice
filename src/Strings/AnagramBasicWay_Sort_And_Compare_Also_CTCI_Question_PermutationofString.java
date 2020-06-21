@@ -18,7 +18,7 @@ public class AnagramBasicWay_Sort_And_Compare_Also_CTCI_Question_PermutationofSt
 		// Sort both the strings
 		// compare the sorted Strings
 		String s1 = "ab";
-		String s2 = "baa";
+		String s2 = "ba";
 		checkAnagram(s1, s2);
 	}
 	private static void checkAnagram(String s1, String s2) {

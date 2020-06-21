@@ -10,3 +10,4 @@ bin/Strings/CountCharactersInString.class
 *.class
 .settings/org.eclipse.wst.common.project.facet.core.xml
 bin/Strings/CountCharactersInString.class
+*.log

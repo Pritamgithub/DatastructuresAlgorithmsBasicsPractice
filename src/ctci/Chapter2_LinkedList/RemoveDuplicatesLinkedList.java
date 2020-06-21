@@ -45,10 +45,15 @@ public class RemoveDuplicatesLinkedList {
 		System.out.println("Data in the HashSet is " + hashSet);
 	}
 
-	private void deleteDuplicates(LinkedList n) {
-		// iterate through linkedList and add each element to hashtable
-		// when we find duplicate element, remove element and continue
-
-	}
-
+	/*
+	 * private void deleteDuplicates(LinkedListNode n) { // iterate through
+	 * linkedList and add each element to hashtable // when we find duplicate
+	 * element, remove element and continue
+	 *
+	 * HashSet<String> set = new HashSet(); LinkedListNode previous = null;
+	 * while (n != null) { if (set.contains(n.data)) { previous.next = n.next; }
+	 * else { set.add(n.data); previous = n; } n = n.next; }
+	 *
+	 * }
+	 */
 }
