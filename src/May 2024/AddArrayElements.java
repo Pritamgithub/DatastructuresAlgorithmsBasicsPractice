@@ -50,10 +50,18 @@ System.out.println(" this is the comparison of two arrays "+Arrays.compare(c, b)
 Arrays.copyOf(c, 10); // will append the new index with 0's
 
 
-//parallel sort means sorting an array based using the multithreading approach
+//parallel sort means sorting an array based using the multithreading approach so basically efficient than the regular sorting
 
 Arrays.parallelSort(c);
 System.out.println(Arrays.toString(c));
+//see if the arrays are mismatched or equals to each other
+//let's compare array c and b
+
+System.out.println(" I will let you know if the arrays are equals "+ Arrays.compare(b, c));
+
+
+
+
 
 }
 
